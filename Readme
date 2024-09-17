@@ -1,0 +1,114 @@
+# Описание проекта
+
+Это Telegram-бот для получения прогноза погоды, который использует API Яндекс.Погоды и Яндекс.Геокодера для получения актуальной информации о погоде в указанном городе. Бот позволяет пользователям получать текущую температуру, прогноз на ближайшие два часа, а также советы по одежде и необходимости взять с собой зонт.
+
+## Функциональность
+
+- Получение координат города по его названию с использованием Яндекс.Геокодера.
+- Запрос текущей погоды и прогноза на ближайшие два часа через API Яндекс.Погоды.
+- Автоматическая отправка обновлений о погоде каждые два часа.
+- Советы по одежде и необходимости зонта на основе текущих погодных условий.
+- Команды бота:
+  - /start — начало работы и выбор города.
+  - /weather — получение актуальной информации о погоде.
+  - /change_location — смена текущего города.
+
+## Инструкции по запуску
+
+1. Установите необходимые библиотеки:
+
+      pip install python-telegram-bot requests
+   
+
+2. Получите API-ключи:
+
+   - Зарегистрируйтесь на Яндекс.Погода API (https://yandex.ru/dev/weather/) и получите API-ключ.
+   - Зарегистрируйтесь на Яндекс.Геокодер API (https://yandex.ru/dev/maps/geocoder/) и получите API-ключ.
+   - Создайте бота в Telegram через @BotFather (https://telegram.me/BotFather) и получите токен бота.
+
+3. Настройте переменные в коде:
+
+   - Замените 'YOUR_TELEGRAM_TOKEN' на ваш токен Telegram-бота.
+   - Замените 'YOUR_YANDEX_WEATHER_API_KEY' на ваш API-ключ Яндекс.Погоды.
+   - Замените 'YOUR_YANDEX_GEOCODER_API_KEY' на ваш API-ключ Яндекс.Геокодера.
+
+4. Запустите бота:
+
+      python your_bot_script.py
+   
+
+5. Используйте бота в Telegram:
+
+   - Найдите вашего бота в Telegram по имени пользователя.
+   - Отправьте команду /start и следуйте инструкциям для выбора города.
+   - Используйте команду /weather для получения актуальной информации о погоде.
+   - Используйте команду /change_location для смены города.
+
+## Используемые технологии и библиотеки
+
+- Python 3
+- python-telegram-bot: библиотека для создания Telegram-ботов.
+- Requests: для выполнения HTTP-запросов к API Яндекса.
+- Logging: для логирования событий и ошибок.
+- Threading: для выполнения мониторинга погоды в отдельном потоке.
+
+---
+
+ENG
+
+# Project Description
+
+This is a Telegram bot for obtaining weather forecasts, which utilizes the Yandex.Weather API and Yandex.Geocoder API to fetch current weather information in a specified city. The bot allows users to receive the current temperature, a forecast for the next two hours, and advice on clothing and whether to take an umbrella.
+
+## Features
+
+- Retrieve city coordinates by its name using Yandex.Geocoder.
+- Request current weather and forecast for the next two hours via Yandex.Weather API.
+- Automatically send weather updates every two hours.
+- Provide advice on clothing and umbrella necessity based on current weather conditions.
+- Bot commands:
+  - /start — start the bot and select a city.
+  - /weather — get current weather information.
+  - /change_location — change the current city.
+
+## Instructions for Running
+
+1. Install required libraries:
+
+      pip install python-telegram-bot requests
+   
+
+2. Obtain API keys:
+
+   - Register at Yandex.Weather API (https://yandex.com/dev/weather/) to get your API key.
+   - Register at Yandex.Geocoder API (https://yandex.com/dev/maps/geocoder/) to get your API key.
+   - Create a bot via @BotFather (https://telegram.me/BotFather) in Telegram and obtain your bot token.
+
+3. Configure variables in the code:
+
+   - Replace 'YOUR_TELEGRAM_TOKEN' with your Telegram bot token.
+   - Replace 'YOUR_YANDEX_WEATHER_API_KEY' with your Yandex.Weather API key.
+   - Replace 'YOUR_YANDEX_GEOCODER_API_KEY' with your Yandex.Geocoder API key.
+
+4. Run the bot:
+
+      python your_bot_script.py
+   
+
+5. Use the bot in Telegram:
+
+   - Find your bot in Telegram by its username.
+   - Send the /start command and follow the instructions to selec
+
+Sussy Compukter, [9/17/2024 3:46 PM]
+t a city.
+   - Use the /weather command to get current weather information.
+   - Use the /change_location command to change the city.
+
+## Technologies and Libraries Used
+
+- Python 3
+- python-telegram-bot: library for creating Telegram bots.
+- Requests: for making HTTP requests to Yandex APIs.
+- Logging: for logging events and errors.
+- Threading: to perform weather monitoring in a separate thread.
