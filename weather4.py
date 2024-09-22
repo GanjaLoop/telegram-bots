@@ -27,7 +27,7 @@ def get_weather():
     global LAT, LON
     url = f"https://api.weather.yandex.ru/v2/forecast?lat={LAT}&lon={LON}&extra=true"
     headers = {
-        "X-Yandex-API-Key": '97b1b7d3-fa75-454d-af31-2f5e34301d06'
+        "X-Yandex-API-Key": 'YOUR_API_KEY'
     }
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
@@ -94,7 +94,7 @@ def generate_weather_message(data):
 
 # Функция для мониторинга и отправки информации
 def monitor_and_send():
-    bot = Bot(token='7462670440:AAE4KBgh_l2a_Bks-LJOWF9UJPbzcQLHlDo')
+    bot = Bot(token='YOUR_TOKEN')
     while True:
         logger.info("Запрос данных о погоде...")
         weather_data = get_weather()
@@ -156,7 +156,7 @@ def change_location(update: Update, context: CallbackContext):
 # Главная функция для запуска бота
 def main():
     logger.info("Запуск бота...")
-    updater = Updater('7462670440:AAE4KBgh_l2a_Bks-LJOWF9UJPbzcQLHlDo', use_context=True)
+    updater = Updater('YOUR_TOKEN', use_context=True)
     dp = updater.dispatcher
 
     conv_handler = ConversationHandler(
